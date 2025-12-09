@@ -1,0 +1,131 @@
+/* ===== RESET CSS básico ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CABECERA GENERAL */
+.cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #311717;
+  color: white;
+  border-bottom: 3px solid #2a2a2a;
+}
+
+/* LOGO */
+.cabecera img {
+  width: 150px;
+  height: 150px;
+  margin-left: 30px;
+}
+
+/* TITULOS */
+.cabecera > div {
+  flex-grow: 1;
+  margin-left: 80px;
+}
+
+.cabecera h1 {
+  font-size: 50px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.cabecera h2 {
+  font-size: 25px;
+  margin: 0;
+  color: #ccc;
+}
+
+/* MENU */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.menu ul li a:hover {
+  background-color: aliceblue;
+  color: black; 
+}
+
+/* BOTÓN HAMBURGUESA */
+.open-menu {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 20;
+  font-size: 26px;
+  color: black;
+  background-color: white;
+  margin: 10px;
+  padding: 2px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto visual cuando el menú está abierto */
+.open-menu.active {
+  background-color: rgb(112, 112, 112);
+  color: white;
+}
+
+/* ===== MENÚ LATERAL DESLIZANTE ===== */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -230px;            /* oculto inicialmente */
+  width: 230px;
+  height: 100%;
+  background-color: #311717;
+  border: 3px solid black;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 15;
+}
+
+.side-menu.active {
+  left: 0;                 /* aparece cuando tiene la clase "active" */
+}
+
+.side-menu li {
+  list-style: none;
+  font-size: 20px;
+  padding: 0;
+}
+
+.side-menu a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.side-menu a:hover {
+  background-color: aliceblue;
+  color: black;
+  font-weight: bold;
+}

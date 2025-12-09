@@ -1,0 +1,329 @@
+/* ===== RESET CSS básico ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CABECERA GENERAL */
+.cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #311717;
+  color: white;
+}
+
+    /* LOGO */
+.cabecera img {
+  width: 150px;
+  height: 150px;
+  margin-left: 30px;
+}
+
+    /* TITULOS */
+.cabecera > div {
+  flex-grow: 1;
+  margin-left: 80px;
+}
+
+.cabecera h1 {
+  font-size: 50px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.cabecera h2 {
+  font-size: 25px;
+  margin: 0;
+  color: #ccc;
+}
+
+    /* MENU */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.menu ul li a:hover {
+  background-color: aliceblue;
+  color: black; 
+}
+
+
+/* BOTÓN HAMBURGUESA */
+.open-menu {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 20;
+  font-size: 26px;
+  color: black;
+  background-color: white;
+  margin: 10px;
+  padding: 2px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+    /* Efecto visual cuando el menú está abierto */
+.open-menu.active {
+  background-color: rgb(112, 112, 112);
+  color: white;
+}
+
+    /* MENÚ LATERAL DESLIZANTE */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -230px;            /* oculto inicialmente */
+  width: 230px;
+  height: 100%;
+  background-color: #311717;
+  border: 3px solid black;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 15;
+}
+
+.side-menu.active {
+  left: 0;                 /* aparece cuando tiene la clase "active" */
+}
+
+.side-menu li {
+  list-style: none;
+  font-size: 20px;
+  padding: 0;
+}
+
+.side-menu a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.side-menu a:hover {
+  background-color: aliceblue;
+  color: black;
+  font-weight: bold;
+}
+
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #5f2d2d;
+}
+
+/* SECCIONES */
+section { /*Estilo tarjeta?*/
+  width: 60%;
+  margin: 15px;
+  padding: 15px;
+  /*background-color: #311717;*/
+
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #311717;
+  font-size: 40px;
+}
+
+  /* SOBRE MI */
+#inicio {
+  padding: 20px;
+  background-color: #f7f2f2;
+  border-radius: 10px;
+}
+
+#inicio div{
+  display: flex;
+  align-items: center;  
+  gap: 20px;
+}
+
+#inicio div p{
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+#inicio div aside img {
+  width: 200px;
+  object-fit: cover;
+  margin-right: 50px;
+}
+
+  /* HERO */
+#hero {
+  padding: 20px;
+  background-color: #f7f2f2;
+  border-radius: 10px;
+}
+
+#hero p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+  /* TABLA */
+#tabla {
+  padding: 20px;
+  background-color: #f7f2f2;
+  border-radius: 10px;
+}
+
+#tabla table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: auto;
+  font-size: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+#tabla thead {
+  background-color: #ff7f7f;
+
+}
+
+#tabla thead th {
+  border: 2px solid black;
+  padding: 10px 15px;
+  font-size: 20px;
+}
+
+#tabla tbody td{
+  border: 2px solid black;
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+  /* GALERIA */
+#galeria {
+  padding: 20px;
+  background-color: #f7f2f2;
+  border-radius: 10px;
+}
+
+/* Grid para las imágenes */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  justify-content: space-between;
+  justify-items: center;
+  gap: 15px; /* espacio entre imágenes */
+}
+
+/* Estilo de las imágenes */
+.galeria-grid img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,1);
+}
+
+  /* FORMULARIO */
+#form {
+  padding: 20px;
+  background-color: #f7f2f2;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#form form{
+  display: flex;
+  flex-direction: column;
+}
+
+#form label{
+  font-size: 18px;
+}
+
+#form input, textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  font-size: 16px;
+}
+
+#form button{
+  width: 50%;
+  font-size: 18px;
+}
+
+  /* CONTACTO */
+#contacto {
+  padding: 20px;
+  background-color: #f7f2f2;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+#contacto p{
+  font-size: 18px;
+}
+
+#contacto li{
+  list-style: none;
+  margin: 10px;
+  font-size: 18px;
+}
+
+#contacto li span{
+  color: blue;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 50px;
+  background: #311717;
+  color: white;
+  font-size: 18px;
+}
+
+.site-footer a{
+  color: orange;
+  text-decoration: none;
+}
+
+.site-footer a:visited{
+  color: rgb(188, 129, 20);
+}
