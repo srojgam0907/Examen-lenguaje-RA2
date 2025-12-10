@@ -157,7 +157,57 @@ Mi idea original era algo más elaborada, ya que quería hacer una web donde pud
 
 ### 4.2 HTML
 
+**1. Partes principales**
 
+  - **Header**: es la parte principal de la página, con sus diferentes funcionalidades, lo que le da al usuario la información necesaria que debe saber sobre la página que está visitando, como: el nombre, el eslogan, que secciones tiene y el logo.
+
+![Header](img-evidencias/header.png)
+    
+  - **Main**: esto constituye todo el cuerpo de la página, sin contar el header ni el footer. Aquí están todas las secciones.
+
+![Main](img-evidencias/main.png)
+    
+  - **Section**: es un fragmento de la página con su correspondiente información y su correspondiente estilo. Puede ser un estilo único o repetirse.
+
+![Section](img-evidencias/section.png)
+
+  - **Footer**: se puede decir que es la despedida hacia el usuario, ya que lo ve cuando llega al final de la página. Se usa para poner información que no es del todo relevante para el usuario pero que no importa que sepa, por ejemplo un mensaje de copyRight.
+
+![Footer](img-evidencias/footer.png)
+
+**2. Menús**
+
+  - **Menú superior**: es algo muy común en las páginas web, ya que hace la navegación mucho más fácil. El usuario puede entrar en la página y solo con ver el menú se puede hacer una idea de lo que esta contiene. Por otra parte, las opciones del menú por norma general tiene enlaces internos a la seccion que le corresponda, de nuevo para hacer la navegación del usuario más cómoda.
+    
+![Menú superior](img-evidencias/menu-principal.png)
+
+  - **Menú lateral**: es un menú igual al menú superior pero con la diferencia de que puedes acceder a él sin importar la zona de la página en la que estes, es decir, si estás ya cerca del final y quieres ver lo que estaba escrito en unas de las secciones del principio de la página solo tienes que abrir el menu lateral y hacer click en la opción que quieras. Hace mucho más cómoda la navegación del usuario.
+
+![Menú lateral](img-evidencias/menu-lateral.png)
+
+**3. Secciones**
+
+  - **Sección Hero**: el objetivo de esta sección es captar la atención del usuario, darle un resumen de lo que se va a encontrar si sigue bajando y conseguir que se quede en la página. Normalmente son secciones atractivas para el ojo humano y directas.
+
+![Hero](img-evidencias/hero.png)
+
+  - **Tabla de datos**: se compone de diferentes datos principales de las series que se ofrecen, de modo que el usuario sepa de manera rápida, fácil y resumida de qué se está hablando.  
+
+![Tabla de datos](img-evidencias/tabla.png)
+
+  - **Galería**: su objetivo es enseñarle al usuario el producto de una forma más visual, de forma que se quede mejor con la información que tu le estas ofreciendo. Por otro lado, para hacerlo más entrenido y atractivo para el usuario, puedes introducir algun efecto cuando se interactúe con las imágenes como que aparezca una sombra de detrás o una transicion como es el zoom para que se amplie un poco la imagen.
+
+![Galería de imágenes](img-evidencias/galeria.png)
+
+  - **Formulario**: esta parte de la página se hace para hacer participe al usuario sobre la información que verá en un futuro y que así se sienta parte de ello. Le puedes pedir su nombre, su email y luego algo cómo sugerencias para seguir ampliando la página con contenido que sabes que va a gustar. De esta manera el usuario siente que su opinión cuenta.
+
+![Formulario](img-evidencias/form.png)
+
+**4. Enlaces**
+
+  - **Internos**: este tipo de enlace se pone para hacerle la vida más fácil al usuario mientras esté visitando tu página. Por ejemplo, puedes poner enlances en las opciones del menú como ya he mencionado antes o también puedes poner un enlance al final de la página para poder subir al inicio de esta simplemente haciendo click. De nuevo es hacerle la navegación más fácil al usuario.
+
+![Enlances internos](img-evidencias/menu-principal.png)
 
 ### 4.3 CSS
 
@@ -165,7 +215,7 @@ Con este diseño quería conseguir un estilo de página tranquilo y simple, pero
 
 **1. Selectores**
 
-  - Selector de tipo: se aplica a todos los elementos que pertenezcan a esa etiqueta. 
+  - **Selector de tipo**: se aplica a todos los elementos que pertenezcan a esa etiqueta. 
 
 ```css
 body {
@@ -176,7 +226,7 @@ body {
 }
 ```
 
-  - Selector de clase: solo se aplica a los elementos que esten dentro de cualquier etiqueta que tenga como atributo la clase elegida.
+  - **Selector de clase**: solo se aplica a los elementos que esten dentro de cualquier etiqueta que tenga como atributo la clase elegida.
     
 ```css
 .cabecera {
@@ -189,7 +239,7 @@ body {
 }
 ```
 
-  - Selector de id: solo se aplica a los elementos que estén dentro de la etiqueta a la que pertenezca de manera única el id mencionado.
+  - **Selector de id**: solo se aplica a los elementos que estén dentro de la etiqueta a la que pertenezca de manera única el id mencionado.
 
 ```css
 #inicio {
@@ -199,7 +249,7 @@ body {
 }
 ```
 
-  - Selector descendente: en este caso se aplica a cualquier h2 que esté dentro de una etiqueta section.
+  - **Selector descendente**: en este caso se aplica a cualquier h2 que esté dentro de una etiqueta section.
 
 ```css
 section h2 {
@@ -210,7 +260,7 @@ section h2 {
 }
 ```
 
-  - Selector de hijo: pongamos que la clase cabecera pertenece a la etiqueta *header*, en este caso el estilo solo se aplica al div que esté justo después de la linea donde se abre la etiqueta header, no se aplicará a ningún otro div que esté dentro. 
+  - **Selector de hijo**: pongamos que la clase cabecera pertenece a la etiqueta *header*, en este caso el estilo solo se aplica al div que esté justo después de la linea donde se abre la etiqueta header, no se aplicará a ningún otro div que esté dentro. 
 
 ```css
 .cabecera > div {
@@ -221,7 +271,7 @@ section h2 {
 
 **2. Pseudoclases**
 
-  - :visited -> cambia de color cuando se ha visitado anteriormente el enlace.
+  - **:visited** -> cambia de color cuando se ha visitado anteriormente el enlace.
 
 ```css
 .site-footer a:visited{
@@ -229,7 +279,7 @@ section h2 {
 }
 ```
 
-  - :hover -> cambia el color del fondo y de la letra cuando pasa el ratón por encima.
+  - **:hover** -> cambia el color del fondo y de la letra cuando pasa el ratón por encima.
 
 ```css
 .menu ul li a:hover {
@@ -240,7 +290,7 @@ section h2 {
 
 **3. Flexbox y Grid**
 
-  - Flexbox: Coloca los elementos en columna con *flex-direction: column* y los centra con *align-items: center*
+  - **Flexbox**: Coloca los elementos en columna con *flex-direction: column* y los centra con *align-items: center*
     
 ```css
 main {
@@ -251,7 +301,7 @@ main {
 }
 ```
 
-  - Grid: crea una tabla con 3 columnas iguales.
+  - **Grid**: crea una tabla con 3 columnas iguales.
 
 ```css
 .galeria-grid {
@@ -274,7 +324,7 @@ Se consigue con el uso de la etiqueta box-shadow:
 
 **5. Estilo del menú**
 
-  - Menú principal:
+  - **Menú principal**:
 
 ```css
 /* CABECERA GENERAL */
@@ -335,7 +385,7 @@ Se consigue con el uso de la etiqueta box-shadow:
 }
 ```
     
-  - Menú lateral:
+  - **Menú lateral**:
 
 ```css
     /* MENÚ LATERAL DESLIZANTE */
